@@ -81,6 +81,9 @@ vendor.bluetooth.soc=cherokee
 ro.bluetooth.library_name=libbluetooth_qti.so
 persist.vendor.btstack.enable.splita2dp=true
 persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+#Telecom_BT add tws+ support {@
+persist.vendor.btstack.enable.twsplus=true
+# @}
 
 #system prop for wipower support
 #Telecom_BT,suheng fix#757065,disable wireless charge
@@ -228,4 +231,5 @@ persist.vendor.bluetooth.modem_nv_support=true
 #BSP Richard for camera fifo{@
 camera.fifo.disable=1
 ##@}
+
 #

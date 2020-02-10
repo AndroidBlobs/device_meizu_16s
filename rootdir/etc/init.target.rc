@@ -91,9 +91,6 @@ on init
     chown system system /sys/class/meizu/motor/usr_f0
     #@}
 
-    #Added by xuguochu@meizu.com for mount CD-ROM.
-    mkdir /mnt/cd-rom 0555 system system
-    #End of Added by xuguochu@meizu.com.
 
 on early-fs
     write /sys/bootprof/bootprof "INIT:start vold"
@@ -109,9 +106,6 @@ on fs
     mkdir /mnt/vendor/persist/data 0700 system system
     write /sys/bootprof/bootprof "INIT:Mount_END"
 
-    #Added by xuguochu@meizu.com for mount CD-ROM.
-    mount iso9660 loop@/system/etc/iAmCdRom.iso /mnt/cd-rom ro
-    #End of Added by xuguochu@meizu.com.
 
 on post-fs
     write /sys/bootprof/bootprof "INIT:post-fs"
@@ -545,4 +539,18 @@ service remosaic_daemon /system/vendor/bin/remosaic_daemon
     user camera
     group camera
 
+# Voice trigger (ez2control)
+on post-fs-data
+    mkdir /data/vendor 0771 system system
+    mkdir /data/vendor/wolfsonmicro 0751 system system
+
+# Voice trigger (ez2control)
+service ez2controld /system/bin/ez2controld
+    class main
+    user root system
+    group root system
+
+# Voice trigger (ez2control)
+#service autobingend /system/bin/autobingend
+#    class main
 

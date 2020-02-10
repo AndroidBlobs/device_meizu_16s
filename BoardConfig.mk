@@ -2,7 +2,7 @@ DEVICE_PATH := device/meizu/16s
 BOARD_VENDOR := meizu
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2019-09-01
+VENDOR_SECURITY_PATCH := 2019-11-01
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml

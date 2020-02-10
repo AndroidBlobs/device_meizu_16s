@@ -4103,7 +4103,7 @@ case "$target" in
       if [ "$sec_stage" == "stage2" ] && [ "$dp_exist" == "0" ]; then
           setprop persist.vendor.ssr.restart_level ALL_ENABLE
       else
-          setprop persist.vendor.ssr.restart_level ALL_DISABLE
+          setprop persist.vendor.ssr.restart_level slpi
       fi
     ;;
 esac
